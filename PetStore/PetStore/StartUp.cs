@@ -13,17 +13,14 @@
                 var userService = new UserService(data);
                 var foodService = new FoodService(data, userService);
                 var toyService = new ToyService(data, userService);
+                var breedService = new BreedService(data);
+                var categoryService = new CategoryService(data);
+                var petService = new PetService(data, breedService, categoryService, userService);
 
-                //foodService.BuyFromDistributor("Cat Food", 0.350, 1.10m, 0.3, DateTime.Now, 1, 1);
 
-                //var toyService = new ToyService(data);
+                petService.BuyPet(Models.Enumerations.Gender.Male, DateTime.Now, 0m, null, 1, 1);
 
-                //toyService.BuyFromDistributor("Ball", null, 3.5m, 0.3, 1, 1);
-
-                //userService.Register("Pesho", "pesho123@mail.com");
-                //foodService.SellFoodToUser(1, 1);
-
-                toyService.SellToyToUser(1, 1);
+                petService.SellPet(1, 1);
             }
         }
     }
