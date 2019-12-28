@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PetStore.Models\PetStore.Models.csproj" />
+  </ItemGroup>
+
 </Project>
